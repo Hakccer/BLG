@@ -1,0 +1,243 @@
+{% extends 'fine.html' %}
+{% block title %}
+<title>Welcome to TheTechHood</title>
+{% endblock title %}
+{% block body %}
+<div id="main">
+    <div id="main_head">
+        <div id="wel">
+            Welcome
+        </div>
+        <div id="wel_intro">
+            So Welcome to TheTechHood a Global Hood For Geeks By Geeks Where You Will Find The Daily Blogs By Us On Tech For Now This Website is in Initial State We Are Regularly Improving Trying To Improve the User Experience. We Post Blogs About Fixing The Issues And About Latest Tech News And About Latest Tech Products And The Information You Want to see Is Just Below.
+        </div>
+    </div>
+
+</div>
+<div id="tops">
+    <div class="tol">
+        {% load static %}
+        <img src="{% static 'ai.png'%}" class="lack" alt="">
+        <div class="tops_text">
+            <div class="tops_head">
+                Artificial Intelligence
+            </div>
+            <div class="tops_para">
+                Artificial intelligence (AI) is intelligence demonstrated by machines, as opposed to the natural intelligence displayed by animals including humans.
+            </div>
+            <button class="learn" onclick="location.href='https://en.wikipedia.org/wiki/Artificial_intelligence';">
+                Learn More
+            </button>
+        </div>
+    </div>
+    <div class="tol" id="blas">
+        {% load static %}
+        <img src="{% static 'block.jpg'%}" id="blo" class="lack" alt="">
+        <div class="tops_text">
+            <div class="tops_head">
+                BlockChain Technology
+            </div>
+            <div class="tops_para">
+                Blockchain is a shared, immutable ledger for recording transactions, tracking assets and building trust. Discover why businesses worldwide are adopting it
+            </div>
+            <button class="learn" onclick="location.href='https://en.wikipedia.org/wiki/Blockchain';">
+                Learn More
+            </button>
+        </div>
+    </div>
+    <div class="tol">
+        {% load static %}
+        <img src="{% static 'cod.jpg'%}" class="lack" alt="">
+        <div class="tops_text">
+            <div class="tops_head">
+                Coding or Programming
+            </div>
+            <div class="tops_para">
+                Computer programming is the process of performing a particular computation, usually by designing and building an executable computer program.
+            </div>
+            <button class="learn" onclick="location.href='https://en.wikipedia.org/wiki/Computer_programming';">
+                Learn More
+            </button>
+        </div>
+    </div>
+</div>
+<div id="drill">
+    <div class="cont">
+        <div class="cont_head">
+            Blogs
+        </div>
+        <div class="cont_para">
+            You Have Come Till And Now I Will Recommend You To Go On The Blogs Section to Get All The List Of Blogs We Have Uploaded.
+        </div>
+        <a class="cont_learn" href="/blogs">
+            Blogs
+        </a>
+    </div>
+</div>
+{% endblock body %}
+
+{% block style %}
+<style>
+    #main{
+        padding-top: 70px;
+        background-color: rgb(73,111,218);
+        color: rgb(255, 255, 255);
+        border-bottom-left-radius: 130px;
+        box-shadow: 12px 12px 2px 1px rgb(73,111,218,0.4);
+        animation-name: for_main;
+        animation-duration: 1s;
+    }
+    #main_head{
+        padding-top: 70px;
+        width: 90%;
+        margin: auto;
+        padding-bottom: 120px;
+    }
+    @keyframes for_main{
+        from{
+            border-bottom-left-radius: 0px;
+        }
+        to{
+            border-bottom-left-radius: 130px;
+        }
+    }
+    @keyframes for_wel{
+        from{
+            margin-left: 70%;
+        }
+        to{
+            margin-left: 0;
+        }
+    }
+    @keyframes for_para{
+        from{
+            opacity: 0%;
+        }
+        to{
+            opacity: 100%;
+        }
+    }
+    #wel{
+        font-family: 'Inter', sans-serif;
+        font-size: 67px;
+        border-bottom: 3px solid white;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        width: fit-content;
+        animation-name: for_wel;
+        animation-duration: 2.5s;
+    }
+    #wel_intro{
+        font-family: 'Quicksand', sans-serif;
+        font-size: larger;
+        letter-spacing: 1.3px;
+        animation-name: for_para;
+        animation-duration: 3s;
+    }
+    #tops{
+        display: flex;
+        width: 95%;
+        margin: auto;
+        margin-top: 60px;
+        animation-name: for_para;
+        animation-duration: 1.7s;
+    }
+    .tol{
+        width: 370px;
+        background-color: rgb(73,111,218);
+        border-radius: 7px;
+        margin: auto;
+        box-shadow: 12px 12px 2px 1px rgb(73,111,218,0.4);
+    }
+    .lack{
+        max-width: 100%;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+        border-bottom-left-radius: 100px;
+        border-bottom: 10px solid white;
+    }
+    #blo{
+        height: 265px;
+    }
+    #blas{
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .tops_text{
+        color: rgb(255, 255, 255);
+        padding: 15px;
+    }
+    .tops_head{
+        font-family: 'Inter', sans-serif;
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+    .tops_para{
+        font-family: 'Quicksand', sans-serif; 
+        letter-spacing: .5px;
+        font-size: large;
+    }
+    .learn{
+        margin-top: 15px;
+        background-color: rgb(255, 255, 255);
+        outline: none;
+        border: none;
+        border-radius: 7px;
+        color: rgb(73,111,218);
+        font-family: 'Quicksand', sans-serif;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    #drill{
+        width: 95%;
+        margin: auto;
+        margin-bottom: 43px;
+    }
+    .cont{
+        background-color: rgb(73,111,218);
+        color: white;
+        margin-top: 50px;
+        padding: 15px;
+        border-radius: 7px;
+        box-shadow: 12px 12px 2px 1px rgb(73,111,218,0.4);
+        padding-bottom: 25px;
+    }
+    .cont_head{
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+    .cont_para{
+        font-family: 'Quicksand', sans-serif;
+        letter-spacing: .5px;
+        font-size: large;
+        margin-bottom: 20px;
+    }
+    .cont_learn{
+        text-decoration: none;
+        background-color: rgb(255, 255, 255);
+        color: rgb(73,111,218);
+        font-family: 'Quicksand', sans-serif;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    @media only screen and (max-width:663px){
+        #tops{
+            display: block;
+        }
+        #blas{
+            margin: auto;
+            margin-top: 37px;
+        }
+        .tol{
+            width: auto;
+            margin-top: 37px;
+        }
+        #blo{
+            height: auto;
+        }
+    }
+</style>
+{% endblock style %}
+

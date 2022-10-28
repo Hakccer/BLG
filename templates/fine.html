@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@700&family=Quicksand:wght@700&display=swap" rel="stylesheet">
+{% load static %}
+<link rel="stylesheet" href="{% static 'fine.css' %}">
+{% load static %}
+<script type="text/javascript" src="{% static 'yoos.js' %}"></script>
+<script src="https://kit.fontawesome.com/8eb01fa4fc.js" crossorigin="anonymous"></script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}{% endblock title %}
+</head>
+<body>
+    <div id="nav">
+        <div id="nav_cont">
+            <div id="nav_head">
+                <div style="display: flex;">
+                    <i class="fa-solid fa-microchip loco"></i>
+                    <div id="nav_head_text" class="loco">
+                        <div id="the" class="hed">
+                            The
+                        </div>
+                        <div id="tech" class="hed">
+                            tech
+                        </div>
+                        <div id="Hood" class="hed">
+                            Hood
+                        </div>
+                    </div>
+                </div>
+                <div id="col_nav">
+                    <i class="fa-brands slot fa-blogger gol" onclick="location.href='{{request.scheme}}://{{request.get_host}}{% url 'Blogs' %}';"></i>
+                    <i class="fa-solid slot fa-house gol" onclick="location.href='{{request.scheme}}://{{request.get_host}}{% url 'home' %}';"></i>
+                    <i class="fa-solid fa-bars gol" id="locka"></i>
+                </div>
+            </div>
+            <div id="nav_lis">
+                <ul id="nav_ul">
+                    <li class="liu"><a href="/">Home</a></li>
+                    <li class="liu"><a href="/blogs">Blogs</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% block body %}{% endblock body %}
+    <div id="copy">
+        <div id="copy_cont">
+            <div id="text">
+                <div id="copy_cont_head">
+                    <div id="whil">
+                        <i class="fa-solid fa-microchip loco"></i>
+                        The Tech Hood
+                    </div>
+                </div>
+                <div id="copy_main">
+                    Copyright © 2022 TheTechHood.com
+                </div>
+            </div>
+            <div id="contact">
+                <div id="cont_nav">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook-square"></i>
+                </div>
+            </div>
+        </div>
+        <div id="baap">
+            A Tanishq Prajapati Productions
+        </div>
+    </div>
+</body>
+<style>
+body{
+    margin: 0;
+    padding: 0;
+}
+#nav{
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+#nav_cont{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(73,111,218);
+}
+#nav_head{
+    font-size: 23px;
+    display: flex;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+}
+#tech{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+#nav_ul{
+    display: flex;
+}
+.liu{
+    list-style-type: none;
+    margin: auto;
+}
+.liu a{
+    text-decoration: none;
+    color: rgb(73,111,218);
+    padding: 10px;
+    transition-property: inherit;
+    transition-duration: .7s;
+}
+.liu a:hover{
+    background-color: rgb(73,111,218);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+#nav_lis{
+    font-family: 'Quicksand', sans-serif;
+    width: 200px;
+    margin-left: auto;
+    font-size:15px;
+    margin-top: 5px;
+}
+#nav_lis ul{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+}
+.fa-microchip{
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: larger;
+}
+#nav_head_text{
+    display: flex;
+    text-align: center;
+    letter-spacing: .5px;
+}
+#col_nav{
+    display: none;
+}
+#copy{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    width: 100%;
+    background-color: rgb(73,111,218);
+    color: white;
+    margin-top: 10px;
+    position: unset;
+    padding-bottom: 15px;
+}
+#copy_cont{
+    padding: 7px;
+    padding-bottom: 0px;
+    width: auto;
+    display: block;
+}
+#copy_cont_head{
+    font-family: 'Anton', sans-serif;
+    margin-top: 5px;
+    display: flex;
+    width: auto;
+}
+#copy_main{
+    margin-top: 7px;
+    font-family: 'Quicksand', sans-serif;
+    border-left: 2px solid rgb(73,111,218);
+    padding-left: 7px;
+    width:max-content;
+    margin-left: 7px;
+    height: 30px;
+    border-left: 0;
+    padding-left: 0;
+    margin-left: 0;
+    text-align: center;
+    width: auto;
+    margin-bottom: 7px;
+    margin-top: 10px;
+}
+#cont_nav{
+    width: fit-content;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 30px;
+}
+#contact{
+    width: 100%;
+}
+#text{
+    display: block;
+}
+#whil i{
+    width:fit-content;
+}
+#whil{
+    display: flex;
+    width: fit-content;
+    margin:auto;
+}
+#baap{
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 7px;
+    padding-bottom: 3px;
+    width: fit-content;
+    margin: auto;
+    border-color: white;
+    margin-top: 10px;
+}
+@media only screen and (max-width:663px){
+    #nav_lis{
+        margin-left: 10px;
+        margin-top: 20px;
+        display: block;
+        width: 100%;
+        display: none;
+        padding-bottom: 15px;
+    }
+    #nav_lis ul{
+        display: block;
+    }
+    .liu{
+        margin-top: 15px;
+        border-bottom: 1px solid white;
+        padding-bottom: 10px;
+    }
+    #nav_head{
+        width: 100%;
+    }
+    #nav_head_text{
+        width: fit-content;
+        margin: auto;
+    }
+    #col_nav{
+        display: flex;
+        width: fit-content;
+        margin-left: auto;
+        margin-top: 5px;
+    }
+    .slot{
+        margin-right: 20px;
+    }
+    #nav_cont{
+        display: block;
+        padding-right: 30px;
+    }
+    #cont_nav{
+        margin: auto;
+    }
+}
+</style>
+<script>
+    window.onload=function(){
+        let but = document.getElementById('locka');
+        let obj = document.getElementById('nav_lis');
+        but.addEventListener('click',()=>{
+            if (obj.style.display != 'none') {
+                obj.style.display = 'none';
+            }
+            else{
+                obj.style.display = 'block';
+            }
+        })
+        let x = window.matchMedia('(min-width:663px)')
+        function media(x) {
+            if (x.matches){
+                obj.style.display = 'block';
+            }
+            else{
+                obj.style.display = 'none';
+            }
+        }
+        window.onresize = ()=>{
+            media(x)
+        }
+    }
+</script>
+{% block style %}{% endblock style %}
+</html>

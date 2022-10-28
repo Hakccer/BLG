@@ -1,0 +1,80 @@
+{% extends 'fine.html' %}
+{% block title %}
+<title>
+    Blogs By TheTechHood
+</title>
+{% endblock title %}
+{% block body %}
+<div id="main">
+    <h1 id="blog_head">
+        Blogs By Us Are Here
+    </h1>
+    <div id="alls">
+        {% for i in data %}
+        <div class="bligo">
+            <a class="bligo_tit" href="blogs/{{i.slug}}">
+                {{i.title}}
+            </a>
+            <div class="bligo_para">
+                {{i.desc}}
+            </div>
+            <a class="fuel" href="blogs/{{i.slug}}">
+                Learn More
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock body %}
+{% block style %}
+<style>
+    a{
+        text-decoration: none;
+    }
+    #main{
+        padding-top: 83px;
+        width: 83%;
+        margin: auto;
+        margin-bottom: 43px;
+    }
+    #blog_head{
+        font-family: 'Inter', sans-serif;
+        padding-bottom: 23px;
+        border-bottom: 7px solid rgb(73,111,218);
+    }
+    .bligo{
+        box-shadow: 12px 12px 2px 1px rgb(73,111,218,0.4);
+        padding: 15px;
+        border-radius: 7px;
+        border: 2px solid black;
+        margin-top: 37px;
+        padding-bottom: 23px;
+    }
+    .bligo_tit{
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 17px;
+        font-size: 30px;
+        color: black;
+    }
+    .bligo_para{
+        font-family: 'Quicksand', sans-serif;
+        font-size: medium;
+        letter-spacing: .5px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    #alls{
+        margin-top: 37px;
+    }
+    .fuel{
+        background-color: rgb(73,111,218);
+        outline: none;
+        border: none;
+        margin-top: 20px;
+        padding: 10px;
+        color: white;
+        font-family: 'Inter', sans-serif;
+    }
+</style>
+{% endblock style %}
+
